@@ -1,6 +1,10 @@
+## Health-Advice-Group
+
+
+Prototype website for Health Advice Group, a charity for environmental health. Weather forecast, air quality dashboard and health advice pages, built with HTML and CSS using sample data.
+
 ## Task Brief
 
----
 
 The software development company you work for has secured a new contract to develop a digital solution for a charity called **_Health Advice Group_**. The charity offers information and support for environmental health issues.
 
