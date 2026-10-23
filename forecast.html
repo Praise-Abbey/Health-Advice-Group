@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the page scale properly on phones (needed for responsive design) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forecast | Health Advice Group</title>
+  <!-- Every page links to the same stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+      <img src="Img-Designer.svg" alt="Health Advice Group logo with the health sign" width="100">
+      <h1 id="title"> <!-- Shows the logo inside the page; alt text describes it for screen readers -->
+        Health Advice Group
+      </h1>
+      <!-- The <nav> tag tells the browser this is a navigation section -->
+      <nav aria-label="Main Navigation">
+        <!-- A list holds the links, because a menu is just a list of links -->
+        <ul>
+          <!-- Each <li> is one menu item -->
+          <!-- The href is the page the link goes to -->
+          <li><a href="index.html">Home</a></li>
+          <!-- aria-current tells screen readers which page this is; you can style it in CSS -->
+          <li><a href="forecast.html" aria-current="page">Forecast</a></li>
+          <li><a href="air-quality.html">Air quality</a></li>
+          <li><a href="advice.html">Advice</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  <main>
+    <!-- Page-specific content goes here --> 
+      <h1>Weather Forecast</h1>
+      <hr>
+      <p>
+        This page shows the simple data to show the prtotype.
+      </p>
+
+      <section>
+        <h2>Today</h2>
+        <div class="card">
+          <p><strong>Temperature: </strong>6&deg;C</p>
+          <p><strong>Conditions: </strong>Chilly</p>
+          <p><strong>Health Tip: </strong>If you're going out, wear 3 layers of clothing.</p>
+        </div>
+      </section>
+
+      <!-- Section 2: forecast as a table, because it is rows and columns of data -->
+      <section>
+        <h2>5-day outlook</h2>
+        <div class="table-wrapper">
+          <table>
+            <!-- caption describes the table for screen readers -->
+            <caption>5-days Forecast</caption>
+            <thead>
+              <tr>
+                <!-- scope="col" tells screen readers this cell is a column heading -->
+                <th scope="col">Day</th>
+                <th scope="col">Temperature</th>
+                <th scope="col">Conditions</th>
+                <th scope="col">Health Tip</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>8°C</td>
+                <td>Cloudy</td>
+                <td>Dress warmly</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>12°C</td>
+                <td>Cool</td>
+                <td>Protect your respiratory system by dressing in adaptive layers</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>15°C</td>
+                <td>Mild</td>
+                <td>Wear a light easily-removable outer layer to prevent overheating and sudden sweating</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>4°C</td>
+                <td>Cold</td>
+                <td>Keep your hands and heads covered, shield your neck and chest, and watch out for indoor cold.</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>10°C</td>
+                <td>Chilly</td>
+                <td>Warm up you joints to prevent stiffness.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>    
+      </section>
+
+      <section>
+        <h2>Staying Safe</h2>
+        <h3>Extreme Heat</h3>
+        <figure>
+          <blockquote cite="https://www.nhs.uk/live-well/seasonal-health/heatwave-how-to-cope-in-hot-weather/">
+            <p>Keep out of the heat if you can. If you have to go outside, stay in the shade especially between 11am and 3pm, wear sunscreen, a hat and light clothes, and avoid exercise or activity that makes you hotter.</p>
+          </blockquote>
+          <figcaption>
+            -by NHS, <cite><a href="https://www.nhs.uk/live-well/seasonal-health/heatwave-how-to-cope-in-hot-weather/">Heatwave: How to cope in hot weather</a></cite>
+          </figcaption>
+        </figure> <br>
+        <h3>Extreme Cold</h3>
+        <ul>
+          <li>Heat your home: Keep your main living areas and bedroom heated to at least 18°C (64°F), especially if you are elderly or vulnerable.</li>
+          <li>Layer your clothing: Wear multiple thin layers of clothes, a warm hat, gloves, and a scarf outdoors. Keep dry.</li>
+          <li>Close bedroom windows: Keep bedroom windows shut at night to lower the risk of chest infections from breathing frigid air.</li>
+          <li>Protect your pipes: Insulate outdoor or exposed water pipes to prevent them from freezing and bursting.</li>
+          <li>Drive with caution: Reduce speed, increase stopping distance, and keep an emergency kit (blanket, scraper, charged phone) in your car.</li>
+        </ul>
+      </section>
+
+      <section id="about" class="section-soft">
+        <h3>About Us 📢</h3>
+        <p>A welcoming place to exploration health information</p>
+      </section>
+
+  </main>
+
+  <footer id="contact">
+    <p>&copy; 2026 Health Advice Group. All rights reserved.</p>
+
+
+      <address>
+        <strong>Contact Support:</strong><br>
+        <a href="mailto:support@gmail.com">support@gmail.com</a><br>
+        <a href="tel:+15555550199">+1 (555) 555-0199</a><br>
+      </address> <br>
+
+
+      <strong>Disclaimer:</strong> Personal Information is not disclosed for personal safety<br>
+      
+      <!-- Health disclaimer: required on every page -->
+      <p>
+        The information on this site is general advice only and is not a
+        substitute for medical advice. If you are worried about your health,
+        speak to your GP, pharmacist or NHS 111. In an emergency, call 999.
+      </p>
+      <p>Weather and air quality figures shown are sample data for this prototype.</p>
+  </footer>
+
+</body>
+</html>

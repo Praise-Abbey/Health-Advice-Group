@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the page scale properly on phones (needed for responsive design) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advice | Health Advice Group</title>
+  <!-- Every page links to the same stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+      <img src="Img-Designer.svg" alt="Health Advice Group logo with the health sign" width="100">
+      <h1 id="title"> <!-- Shows the logo inside the page; alt text describes it for screen readers -->
+        Health Advice Group
+      </h1>
+      <!-- The <nav> tag tells the browser this is a navigation section -->
+      <nav aria-label="Main Navigation">
+        <!-- A list holds the links, because a menu is just a list of links -->
+        <ul>
+          <!-- Each <li> is one menu item -->
+          <!-- The href is the page the link goes to -->
+          <li><a href="index.html">Home</a></li>
+          <!-- aria-current tells screen readers which page this is; you can style it in CSS -->
+          <li><a href="forecast.html">Forecast</a></li>
+          <li><a href="air-quality.html">Air quality</a></li>
+          <li><a href="advice.html" aria-current="page">Advice</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  <main>
+    <!-- Page-specific content goes here -->
+    <h1>Health Advice</h1>
+    <hr>
+
+    <section>
+      <h2>Extreme Cold</h2>
+      <div>
+        <div class="card">
+          <p>To stay safe during extreme cold, focus on these critical conditions:</p>
+      
+          <h3>🏠 Indoors</h3>
+          <ul>
+            <li>Heat key rooms: Keep your living room and bedroom at at least 18°C.</li>
+            <li>Close windows: Keep bedroom windows shut at night to protect your lungs.</li>
+            <li>Stay active: Move around at least once an hour to boost circulation.</li>
+            <li>Eat hot meals: Consume warm food and drinks regularly to maintain body heat.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🧥 Outdoors</h3>
+          <ul>
+            <li>Layer up: Wear multiple thin layers of wool or fleece instead of one thick coat.</li>
+            <li>Cover up: Always wear a hat, gloves, and a scarf over your mouth to warm the air you breathe.</li>
+            <li>Wear gripped boots: Use shoes with deep soles to avoid slipping on ice.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🚨 Emergency Warning Signs</h3>
+          <ul>
+            <li>Hypothermia: Watch for shivering, confusion, slurred speech, and drowsiness. Seek immediate medical help.</li>
+            <li>Frostbite: Watch for pale, numb, or stinging skin on fingers, toes, and ears. Warm them gently.</li> 
+            <li>Check on others: Regularly check on elderly neighbors, infants, and vulnerable family members.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+    <section>
+      <h2>Extreme Heat</h2>
+      <div>
+        <div class="card">
+          <p>Stay safe during extreme heat by keeping hydrated, cooling your body and home, and watching for signs of heat-related illness.</p>
+
+          <h3>💧 Hydration</h3>
+          <ul>
+            <li>Drink plenty of fluids: Have water, or diluted squash, regularly through the day, even if you do not feel thirsty.</li>
+            <li>Limit alcohol, caffeine and very sugary drinks: They can make you lose more water.</li>
+            <li>Eat cold meals: Salads and fruit are light and contain water.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>☀️ Sun and Protection Activity</h3>
+          <ul>
+            <li>Stay out of the sun: Keep to the shade, especially between 11am and 3pm.</li>
+            <li>Dress for the heat: Wear light, loose clothes, a hat and sunscreen.</li>
+            <li>Take it easy: Avoid exercise or activity that makes you hotter. Plan chores for the cooler parts of the day.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🏠 Keeping your Home Cool</h3>
+          <ul>
+            <li>Close curtains: Shade windows that face the sun during the day.</li>
+            <li>Open windows at night: Let cooler air in once it is cooler outside than inside.</li>
+            <li>Turn off what you do not need: Lights and electrical equipment give off heat.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🚨 Emergency Warning Signs</h3>
+          <ul>
+            <li>Heat exhaustion: Watch for headache, dizziness, feeling sick, heavy sweating and intense thirst. Move somewhere cool, drink water and cool the skin.</li>
+            <li>Heatstroke: If someone stops sweating, is confused or loses consciousness, call 999 immediately.</li>
+            <li>Check on others: Look in on older neighbours, babies, young children and vulnerable family members.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+    <section>
+      <div class="card">
+        <h2>Asthma</h2>
+        <p>Asthma is a long-term condition that causes inflammation and narrowing of the airways, leading to symptoms like wheezing, coughing, and shortness of breath. <br>
+        <br> 
+        Managing it daily requires using a preventer inhaler as prescribed to reduce inflammation alongside a reliever inhaler to quickly open the airways when symptoms arise. It is also essential to attend annual NHS reviews and avoid common triggers like smoke, cold air, and pollen.<br> <br> 
+        During an asthma attack, you should sit upright, take regular puffs of your reliever inhaler every few minutes, and call 999 immediately if your symptoms worsen or do not improve.</p>
+      </div>
+      
+
+    </section>
+    <section>
+      <h2>Hay fever</h2>
+      <!-- <details> makes a section that opens and closes, with no JavaScript -->
+      <details>
+        <summary>Hay Fever</summary>
+        <p>Hay fever is a common allergy that causes sneezing, coughing and itchy eyes. You cannot cure it, but there are things you can do to help your symptoms, or medicines you can take to help.</p> <br>
+        <p>Hay fever can be managed effectively using a combination of over-the-counter medications, barrier methods, and practical lifestyle habits</p> <br>
+
+        <details>
+          <!-- The clickable summary stays short and simple -->
+          <summary>DO</summary>
+
+          <!-- The actual list lives cleanly inside the collapsible area -->
+          <ul class="custom-check-list">
+            <li>put petroleum jelly (such as Vaseline) around your nostrils to trap pollen</li>
+            <li>wear wraparound sunglasses, a mask or a wide-brimmed hat to stop pollen getting into your nose and eyes</li>
+            <li>shower and change your clothes after you have been outside to wash pollen off</li>
+            <li>keep windows and doors shut as much as possible</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>DON'T</summary>
+
+          <ul class="custom-down-list">
+            <li>do not cut grass or walk on grass</li>
+            <li>do not spend too much time outside</li>
+            <li>do not keep fresh flowers in the house</li>
+            <li>do not smoke or be around smoke – it makes your symptoms worse</li>
+          </ul>
+        </details>
+
+      </details>
+
+    </section>
+    <section id="home-assessment" class="section-soft">
+      <h2>Home risk assessment</h2>
+      <p>Tick anything that applies to your home. The advice under each item tells you what to do.</p>
+
+      <!-- A form lets the Reset button clear every tick at once.
+       There is no submit button, because nothing is sent anywhere. -->
+      <form>
+
+        <!-- fieldset groups related checkboxes; legend is the group's title -->
+        <fieldset>
+          <legend>Damp and mould</legend>
+
+          <!-- Each checkbox needs a label whose "for" matches the checkbox "id".
+           This lets users click the text to tick the box and helps screen readers. -->
+          <p>
+            <input type="checkbox" id="mould">
+            <label for="mould">There is visible mould on walls or ceilings</label>
+          </p>
+          <p class="tip">Clean small patches with a suitable cleaner and improve ventilation. Mould can make asthma worse.</p>
+
+          <p>
+            <input type="checkbox" id="damp">
+            <label for="damp">The air feels damp or windows have heavy condensation</label>
+          </p>
+          <p class="tip">Open windows briefly each day and use extractor fans when cooking or bathing.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Heating and temperature</legend>
+
+          <p>
+            <input type="checkbox" id="cold">
+            <label for="cold">Some rooms are hard to keep warm</label>
+          </p>
+          <p class="tip">Keep the rooms you use most warm, especially in cold weather.</p>
+
+          <p>
+            <input type="checkbox" id="hot">
+            <label for="hot">Rooms get very hot in summer</label>
+          </p>
+          <p class="tip">Close curtains in the day and open windows when it is cooler outside.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Air and allergens</legend>
+
+          <p>
+            <input type="checkbox" id="dust">
+            <label for="dust">Dust builds up quickly, or bedding is rarely washed</label>
+          </p>
+          <p class="tip">Wash bedding regularly and dust with a damp cloth.</p>
+
+          <p>
+            <input type="checkbox" id="pollen">
+            <label for="pollen">I leave windows open on high pollen days</label>
+          </p>
+          <p class="tip">On high pollen days, keep windows closed, especially in the morning and evening.</p>
+        </fieldset>
+
+        <!-- type="reset" clears all ticks and does not send the form -->
+        <button type="reset">Clear all ticks</button>
+      </form>
+
+      <p><small>This is general information, not medical advice.</small></p>
+    </section>
+
+    <section id="about" class="section-soft">
+        <h3>About Us 📢</h3>
+        <p>A welcoming place to exploration health information</p>
+      </section>
+      
+  </main>
+
+  <footer id="contact">
+    <p>&copy; 2026 Health Advice Group. All rights reserved.</p>
+
+
+      <address>
+        <strong>Contact Support:</strong><br>
+        <a href="mailto:support@gmail.com">support@gmail.com</a><br>
+        <a href="tel:+15555550199">+1 (555) 555-0199</a><br>
+      </address> <br>
+
+
+      <strong>Disclaimer:</strong> Personal Information is not disclosed for personal safety<br>
+
+      <!-- Health disclaimer: required on every page -->
+      <p>
+        The information on this site is general advice only and is not a
+        substitute for medical advice. If you are worried about your health,
+        speak to your GP, pharmacist or NHS 111. In an emergency, call 999.
+      </p>
+      <p>Weather and air quality figures shown are sample data for this prototype.</p>
+  </footer>
+
+</body>
+</html>

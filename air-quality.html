@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the page scale properly on phones (needed for responsive design) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Quality | Health Advice Group</title>
+  <!-- Every page links to the same stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+      <img src="Img-Designer.svg" alt="Health Advice Group logo with the health sign" width="100">
+      <h1 id="title"> <!-- Shows the logo inside the page; alt text describes it for screen readers -->
+        Health Advice Group
+      </h1>
+      <!-- The <nav> tag tells the browser this is a navigation section -->
+      <nav aria-label="Main Navigation">
+        <!-- A list holds the links, because a menu is just a list of links -->
+        <ul>
+          <!-- Each <li> is one menu item -->
+          <!-- The href is the page the link goes to -->
+          <li><a href="index.html">Home</a></li>
+          <!-- aria-current tells screen readers which page this is; you can style it in CSS -->
+          <li><a href="forecast.html">Forecast</a></li>
+          <li><a href="air-quality.html" aria-current="page">Air quality</a></li>
+          <li><a href="advice.html">Advice</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Air quality dashboard</h1>
+      <hr>
+      <p>This page shows sample data to demonstrate the prototype. It is not live air quality data.</p>
+
+      <!-- Section 1: overall air quality in a card, like a dashboard "headline" -->
+      <section>
+        <h2>Right now</h2>
+        <div class="card">
+          <p><strong>Overall level:</strong> <span class="level moderate">Moderate (index 5)</span></p>
+          <p><strong>Sample location:</strong> Sample town</p>
+          <p><strong>Last updated:</strong> sample data</p>
+        </div>
+      </section>
+
+      <!-- Section 2: pollutant readings in a table (rows and columns of data) -->
+      <section>
+        <h2>Current readings</h2>
+
+        <!-- This div lets the table scroll sideways on a small screen instead of breaking the layout -->
+        <div class="table-wrapper">
+          <table>
+            <caption>Sample pollutant readings</caption>
+            <thead>
+              <tr>
+                <th scope="col">Pollutant</th>
+                <th scope="col">Reading (µg/m³)</th>
+                <th scope="col">Level</th>
+                <th scope="col">What it means</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>PM2.5 (fine particles)</td>
+                <td>18</td>
+                <td><span class="level moderate">Moderate</span></td>
+                <td>Tiny particles that can reach deep into the lungs.</td>
+              </tr>
+              <tr>
+                <td>PM10 (coarse particles)</td>
+                <td>25</td>
+                <td><span class="level low">Low</span></td>
+                <td>Dust and pollen-sized particles.</td>
+              </tr>
+              <tr>
+                <td>Nitrogen dioxide (NO₂)</td>
+                <td>60</td>
+                <td><span class="level moderate">Moderate</span></td>
+                <td>Mostly from traffic. Can irritate the airways.</td>
+              </tr>
+              <tr>
+                <td>Ozone (O₃)</td>
+                <td>45</td>
+                <td><span class="level low">Low</span></td>
+                <td>Can build up on hot, sunny days.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3: the key, so users know what each level means -->
+      <section>
+        <h2>Air quality key</h2>
+        <table>
+          <caption>Air quality levels</caption>
+          <thead>
+            <tr>
+              <th scope="col">Level</th>
+              <th scope="col">Index</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="level low">Low</span></td><td>1 to 3</td></tr>
+            <tr><td><span class="level moderate">Moderate</span></td><td>4 to 6</td></tr>
+            <tr><td><span class="level high">High</span></td><td>7 to 9</td></tr>
+            <tr><td><span class="level very-high">Very high</span></td><td>10</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Section 4: advice for each level. details/summary opens and closes with no JavaScript -->
+      <section>
+        <h2>What to do</h2>
+
+        <details>
+          <summary>Low</summary>
+          <p>Air quality is good. Enjoy your usual outdoor activities.</p>
+        </details>
+
+        <details>
+          <summary>Moderate</summary>
+          <p>Most people are fine. If you have asthma or a heart or lung condition and notice symptoms, think about doing less strenuous activity outdoors.</p>
+        </details>
+
+        <details>
+          <summary>High</summary>
+          <p>Reduce strenuous activity outdoors, especially if you have a lung or heart condition or notice symptoms. Keep any reliever inhaler with you.</p>
+        </details>
+
+        <details>
+          <summary>Very high</summary>
+          <p>Avoid strenuous activity outdoors. Speak to your GP or pharmacist if you are worried about your symptoms.</p>
+        </details>
+
+        <p><small>This is general information, not medical advice.</small></p>
+      </section>
+
+      <section id="about" class="section-soft">
+        <h3>About Us 📢</h3>
+        <p>A welcoming place to exploration health information</p>
+      </section>
+      
+  </main>
+
+  <footer id="contact">
+    <p>&copy; 2026 Health Advice Group. All rights reserved.</p>
+
+
+      <address>
+        <strong>Contact Support:</strong><br>
+        <a href="mailto:support@gmail.com">support@gmail.com</a><br>
+        <a href="tel:+15555550199">+1 (555) 555-0199</a><br>
+      </address> <br>
+
+
+      <strong>Disclaimer:</strong> Personal Information is not disclosed for personal safety<br>
+      
+      <!-- Health disclaimer: required on every page -->
+      <p>
+        The information on this site is general advice only and is not a
+        substitute for medical advice. If you are worried about your health,
+        speak to your GP, pharmacist or NHS 111. In an emergency, call 999.
+      </p>
+      <p>Weather and air quality figures shown are sample data for this prototype.</p>
+  </footer>
+
+</body>
+</html>

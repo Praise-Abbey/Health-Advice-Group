@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Health Advice Group</title>
+      <link rel="stylesheet" href="style.css">
+      <!-- This line sets the small icon shown in the browser tab.
+      rel="icon" tells the browser this file is the page's icon.
+      href is the path to your image file. -->
+      <link rel="icon" href="Designer.svg" type="image/svg+xml">
+   </head>
+   
+   <body>
+    <header class="site-header">
+      <img src="Img-Designer.svg" alt="Health Advice Group logo with the health sign" width="100">
+      <h1 id="title"> <!-- Shows the logo inside the page; alt text describes it for screen readers -->
+        Health Advice Group
+      </h1>
+      <p>Welcome to our advice group😊. What would you like to do today?</p>
+
+      <!-- The <nav> tag tells the browser this is a navigation section -->
+      <nav aria-label="Main Navigation">
+        <!-- A list holds the links, because a menu is just a list of links -->
+        <ul>
+          <!-- Each <li> is one menu item -->
+          <!-- The href is the page the link goes to -->
+          <li><a href="index.html"  aria-current="page">Home</a></li>
+          <!-- aria-current tells screen readers which page this is; you can style it in CSS -->
+          <li><a href="forecast.html">Forecast</a></li>
+          <li><a href="air-quality.html">Air quality</a></li>
+          <li><a href="advice.html">Advice</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main and section contains the body, that is the details of the program-->
+    <main>
+      <!-- The h1 is already in the header, so main starts with h2 -->
+
+      <!-- Section 1: who we are, kept short -->
+      <section>
+        <div style="margin-top: 50px;">
+          <h2>How we can help?</h2>
+        </div>
+          <p>
+            Health Advice Group is a charity offering information and support on
+            environmental health. We give advice on extreme weather, seasonal
+            allergies such as hay fever, conditions such as asthma, and how to
+            check your home for risks.
+          </p>
+      </section>
+
+      <!-- Section 2: one card for each main part of the site -->
+      <section>
+        <h2>What would you like to do?</h2>
+
+        <div class="card">
+          <h3>Check the weather forecast</h3>
+          <p>See the outlook for the week with health tips for each day.</p>
+          <!-- Link text says where the link goes, which helps screen reader users -->
+          <button class="button-primary"><a href="forecast.html">View the weather forecast</a></button>
+        </div>
+
+        <div class="card">
+          <h3>Monitor air quality</h3>
+          <p>See current air quality levels and what they mean for your health.</p>
+          <button class="button-primary"><a href="air-quality.html">View the air quality dashboard</a></button>
+        </div>
+
+        <div class="card">
+          <h3>Get health advice</h3>
+          <p>Advice on extreme heat and cold, asthma and hay fever.</p>
+          <button class="button-primary"><a href="advice.html">Read our health advice</a></button>
+        </div>
+
+        <div class="card">
+          <h3>Check your home</h3>
+          <p>Work through a short checklist to spot risks in your home.</p>
+          <!-- #home-assessment jumps straight to that section of the advice page -->
+          <button class="button-primary"><a href="advice.html#home-assessment">Start the home risk assessment</a></button>
+        </div>
+      </section>
+
+      <section id="about" class="section-soft">
+        <h3>About Us 📢</h3>
+        <p>A welcoming place to exploration health information</p>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <p>&copy; 2026 Health Advice Group. All rights reserved.</p>
+
+
+      <address>
+        <strong>Contact Support:</strong><br>
+        <a href="mailto:support@gmail.com">support@gmail.com</a><br>
+        <a href="tel:+15555550199">+1 (555) 555-0199</a><br>
+      </address> <br>
+
+
+      <strong>Disclaimer:</strong> Personal Information is not disclosed for personal safety<br>
+
+      <!-- Health disclaimer: required on every page -->
+      <p>
+        The information on this site is general advice only and is not a
+        substitute for medical advice. If you are worried about your health,
+        speak to your GP, pharmacist or NHS 111. In an emergency, call 999.
+      </p>
+      <p>Weather and air quality figures shown are sample data for this prototype.</p>
+    </footer>
+
+   </body>
+</html>

@@ -1,0 +1,353 @@
+:root {
+  --primary: #0F766E;
+  --primary-hover: #115E59;
+  --logo-teal: #2CA6A4;
+
+  --background: #FAFAF7;
+  --surface: #FFFFFF;
+  --section-soft: #F0FDFA;
+  --active-background: #E0F2F1;
+
+  --text: #1F2937;
+  --text-muted: #475569;
+  --border: #D5E5E2;
+
+  --accent: #FCD34D;
+
+  --footer-background: #134E4A;
+  --footer-text: #F0FDFA;
+  --footer-link: #CCFBF1;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FAFAF7;
+}
+
+
+
+
+/* HTML */
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+header {
+  /* Centres inline content (text and images) inside the header */
+  text-align: center;
+}
+
+/* Only affects the img inside the header element */
+header img {
+  /* Makes the image its own block so auto margins can work */
+  display: block;
+
+  /* auto on left and right pushes the image to the centre. The 0 is the top and bottom margin. */
+  margin: 0 auto;
+  padding: 5px;
+  width: 190px;
+
+  /* Never let the image be wider than its container. On a narrow phone screen it shrinks instead of overflowing. */
+  max-width: 100%;
+}
+
+/* Only affects the h1 inside the header element */
+header h1 {
+  color: #0F766E;
+  text-align: center;
+}
+
+/* Only affects the p inside the header element */
+header p {
+  color:	#1F2937;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Remove the bullet points and default spacing from the list */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  /* Flexbox puts the items side by side in a row */
+  display: flex;
+  gap: 20px; /* space between each link */
+
+  /* Centre the items horizontally inside the list */
+  justify-content: center;
+  /* Lets the links drop onto a second line on a narrow phone screen instead of overflowing */
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+/* Remove the underline from the links and set their color */
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Change the color when the mouse is over a link */
+/* :focus does the same for keyboard users pressing Tab */
+nav a:hover,
+nav a:focus {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Highlights the link for the page the user is currently on */
+nav a[aria-current="page"] {
+  font-weight: bold;
+}
+
+
+
+/* advice page */
+
+
+
+
+/* 1. Remove the default bullet dots */
+.custom-check-list {
+  list-style-type: none; 
+  padding-left: 0;
+}
+
+/* 2. Add the checkmark before each list item */
+.custom-check-list li::before {
+  content: "✔";
+  color: #28a745;       /* Changes the checkmark to green */
+  display: inline-block;
+  width: 1.5em;         /* Adds consistent spacing after the checkmark */
+}
+
+/* 1. Remove the default bullet dots */
+.custom-down-list {
+  list-style-type: none; 
+  padding-left: 0;
+}
+
+/* 2. Add the checkmark before each list item */
+.custom-down-list li::before {
+  content: "❌";
+  color: #dc3545;       /* Changes the checkmark to red */
+  display: inline-block;
+  width: 1.5em;         /* Adds consistent spacing after the checkmark */
+}
+
+/* Box around each group of checkboxes */
+fieldset {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #00a8a8;
+  border-radius: 8px;
+}
+
+/* Group title */
+legend {
+  font-weight: bold;
+  padding: 0 8px;
+}
+
+/* Makes the clickable text easier to tap on a phone */
+label {
+  padding: 4px;
+  cursor: pointer;
+}
+
+/* Advice text under each checkbox, indented and slightly smaller */
+.tip {
+  margin-left: 30px;
+  font-size: 0.9em;
+}
+
+
+
+/* air-quality page */
+
+
+
+
+/* Makes wide tables scroll sideways on small screens instead of breaking the layout */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;   /* removes the gap between cell borders */
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #cccccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #e6f4f4;
+}
+
+/* Coloured label for each level. The words are always shown too,
+   so the meaning does not depend on colour alone. */
+.level {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #000000;              /* dark text keeps the contrast high */
+}
+
+.low       { background-color: #b7e4c7; }
+.moderate  { background-color: #ffe8a3; }
+.high      { background-color: #ffb199; }
+.very-high { background-color: #e5a0c5; }
+
+
+
+/* forecast page */
+
+
+
+
+/* The "Today" box on the forecast page (also reused on the air quality page) */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #00a8a8;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* Removes the extra space under the last line inside a card */
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Space between each section of the page */
+section {
+  margin-bottom: 30px;
+}
+
+/* Space below headings, so they don't touch the content under them */
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+/* Lists such as the "Staying safe" advice */
+section ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+
+
+
+/*  footer */
+
+
+
+
+/* Footer shared by every page */
+footer {
+  background-color: var(--footer-background);
+  color: var(--footer-text);     /* dark grey keeps the text easy to read on the light background */
+  margin-top: 40px;
+  padding: 32px 20px;
+  border-top: 1px solid #cccccc;
+  text-align: center;
+  font-size: 0.9em;
+  
+}
+
+footer a {
+  color: var(--footer-link);
+}
+
+
+/* Homepage */
+
+
+
+/* Headings inside a card sit at the top, so remove the extra space above them */
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* Links in the main content: dark teal on white is easy to read */
+main a {
+  color: #006666;
+  font-weight: bold;
+}
+
+/* Changes the link when the mouse is over it or it is selected with the keyboard */
+main a:hover,
+main a:focus {
+  color: #003d3d;
+  text-decoration: underline;
+}
+
+
+
+/* Main buttons */
+
+
+
+.button-primary {
+  background-color: var(--primary);
+  color: var(--surface);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Secondary buttons */
+.button-secondary {
+  background-color: var(--surface);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+/* Small decorative highlights */
+.accent {
+  background-color: var(--accent);
+  color: var(--text);
+}
+
+
+/* Fixes */
+
+
+
+/* The button links were picking up the dark teal link colour from "main a",
+   which is hard to read on the teal button. This makes the text white. */
+.button-primary a,
+.button-primary a:hover,
+.button-primary a:focus {
+  color: var(--surface);
+  text-decoration: none;
+}
+
+/* Soft background for the About section (the class was used in the HTML but not styled) */
+.section-soft {
+  background-color: var(--section-soft);
+  padding: 15px;
+  border-radius: 8px;
+}
